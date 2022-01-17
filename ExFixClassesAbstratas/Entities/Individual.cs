@@ -5,6 +5,10 @@ namespace ExFixClassesAbstratas.Entities
     {
         public double HealthExpenditures { get; set; }
 
+        public Individual(string name, double anualIncome)
+            :base(name, anualIncome)
+        {
+        }
         public Individual(string name, double anualIncome, double healthExpenditures) 
             :base(name,anualIncome)
         {
@@ -18,7 +22,7 @@ namespace ExFixClassesAbstratas.Entities
             }
             else
             {
-                return (AnualIncome * 0.25) - (HealthExpenditures * 0.5);
+                return ((AnualIncome * 0.25) - (HealthExpenditures * 0.5));
             }
         }
     }

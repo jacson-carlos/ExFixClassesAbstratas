@@ -1,4 +1,4 @@
-﻿
+﻿using System.Globalization;
 namespace ExFixClassesAbstratas.Entities
 {
     abstract class TaxPayer
@@ -13,6 +13,13 @@ namespace ExFixClassesAbstratas.Entities
         }
 
         public abstract double Tax();
+
+        public override string ToString()
+        {
+            return Name
+                + ": $ "
+                + Tax().ToString("F2", CultureInfo.InvariantCulture);
+        }
 
     }
 }
