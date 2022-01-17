@@ -12,7 +12,7 @@ namespace ExFixClassesAbstratas.Entities
         }
         public override double Tax()
         {
-            if(AnualIncome > 20000.00)
+            if(AnualIncome < 20000.00)
             {
                 return AnualIncome * 0.15;
             }
